@@ -1,38 +1,69 @@
-.App {
-  text-align: center;
+.App{
+  max-width: 370px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.contant{
+  display: flex;
+  align-items: center;
+  margin: 8px 16px;
+  width: 100%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.contant input{
+  height: 40px;
+  width: 100%;
+  border: 1px solid white;
+  background-color: transparent;
+  border-radius: 10px;
+  color: white;
+  font-size: 20px;
+  padding-left: 40px;
+  position: relative;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search-icon{
+  position: absolute;
+  font-size: 25px;
+  color: white;
+  margin-left: 8px;
+}
+.flex{
+  display: flex;
+  align-items: center;
+}
+.plus{
+  margin-top: 8px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+.contact-box{
+  width: 360px;
+  height: 64px;
+  margin: 8px 16px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ffeaae ;
+}
+.user-icon{
+  font-size: 48px;
+  color: #f6820c;
+}
+.contact-box-contant{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.contact-box-contant h3{
+ margin: 0;
+ font-size: 18px;
+ font-weight: 500;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contact-box-contant p{
+ margin: 0;
+ font-size: 14px;
+}
+.edit-delete-icons{
+  font-size: 27px;
+  display: flex;
+  gap: 9px;
+  cursor: pointer;
 }
