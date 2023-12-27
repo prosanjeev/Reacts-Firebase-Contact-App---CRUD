@@ -1,0 +1,35 @@
+.popup-box{
+    width: 50vw;
+    height: 200px;
+    background-color: white;
+    margin: 8px 16px;
+    position: absolute;
+    z-index: 50;
+    top: 130px;
+    
+}
+.close-icon{
+    font-size: 35px;
+    cursor: pointer;
+}
+form{
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    padding: 0 40px;
+}
+form button{
+    width: 40%;
+    padding: 8px 16px;
+    background-color:#fcca3f ;
+    cursor: pointer;
+}
+/* .blur{
+    position: absolute;
+    top: 0;
+    filter: blur(10px);
+    height: 100vh ;
+    width: 100vw;
+    z-index: 40;
+
+} */

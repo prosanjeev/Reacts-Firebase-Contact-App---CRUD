@@ -1,5 +1,5 @@
 import './App.css';
-import NavBar from './config/components/NavBar';
+import NavBar from './components/NavBar';
 import { IoSearch } from "react-icons/io5";
 import { FaCirclePlus } from "react-icons/fa6";
 import { useEffect, useState } from 'react';
@@ -8,10 +8,20 @@ import { db } from './config/firebase';
 import { FaRegUserCircle } from "react-icons/fa";
 import { RiEditCircleLine } from "react-icons/ri";
 import { MdDelete } from "react-icons/md";
+import Model from './components/Model';
+
 
 function App() {
 
   const [contacts, setContacts] = useState([]);
+  const [isOpen, setIsOpen] = useState(false)
+
+  const open = ()=> {
+    setIsOpen(true);
+  }
+  const onClose = ()=> {
+    setIsOpen(false);
+  }
 
   useEffect(() => {
     const getContacts = async () => {
@@ -25,7 +35,6 @@ function App() {
           
         });
           setContacts(contactLists)
-          console.log(contactLists)
       } catch(error){}
 
     };
@@ -37,7 +46,7 @@ function App() {
 
 
   return (
-
+<>
     <div className="App">
       <NavBar />
       <div className='flex'>
@@ -45,8 +54,8 @@ function App() {
           <IoSearch className='search-icon' />
           <input type='text'></input>
         </div>
-        <div className='plus'>
-          <FaCirclePlus />
+        <div  className='plus'>
+          <FaCirclePlus onClick={open} />
         </div>
       </div>
       {contacts.map((contact)=>(
@@ -62,9 +71,14 @@ function App() {
               </div>
 
           </div>
+         
 
       ))}
+      <Model isOpen={isOpen} onClose={onClose}>
+        hi
+      </Model>
     </div>
+    </>
   )
 
       }

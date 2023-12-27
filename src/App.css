@@ -43,6 +43,7 @@
   justify-content: space-around;
   align-items: center;
   background-color: #ffeaae ;
+  border-radius: 5px;
 }
 .user-icon{
   font-size: 48px;
